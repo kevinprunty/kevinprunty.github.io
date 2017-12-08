@@ -4,10 +4,12 @@ const   gulp = require('gulp'),
         g_concat = require('gulp-concat'),
         g_uglify = require('gulp-uglify'),
         lazypipe = require('lazypipe'),
-        rename = require("gulp-rename");
+        rename = require("gulp-rename"),
+        clean = require("gulp-clean");
 
 //Constant variables
 const scriptsFolder = 'scripts';
+const appFile = 'scripts/app.js';
 
 
 
@@ -22,18 +24,33 @@ const uglify = lazypipe()
               .pipe(gulp.dest, scriptsFolder);
 
 const concat = lazypipe()
-              .pipe(g_concat)
+              .pipe(g_concat, "app.js")
+              .pipe(rename, {
+                  dirname: "./",
+                  basename: "app",
+                  extname: ".js"
+              })
               .pipe(gulp.dest, scriptsFolder);
 
+
+
+//Clean pipe
+gulp.task('clean', function(){
+    return 
+    //Clean pipe of app.js
+    //gulp.src('scripts/app*.js', {read: false}).pipe(clean());  
+});
+
+//Concat source files
+gulp.task('concat', function(){
+    return gulp.src('scripts/sources/*.js')
+            .pipe(concat());
+});
+
 //Uglify app.js file
-gulp.task('uglify', function(){
-        gulp.src('scripts/app.js')
+gulp.task('uglify', ['concat'], function(){
+    gulp.src(appFile)
         .pipe(uglify());
     
 });
 
-gulp.task('concat', function(){
-    return gulp.src('scripts/sources/*')
-            .pipe(concat)
-            .pipe(gulp.dest, scriptsFolder/app.js);
-});
