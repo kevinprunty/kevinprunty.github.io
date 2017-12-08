@@ -36,13 +36,11 @@ const concat = lazypipe()
 
 //Clean pipe
 gulp.task('clean', function(){
-    return 
-    //Clean pipe of app.js
-    //gulp.src('scripts/app*.js', {read: false}).pipe(clean());  
+    return gulp.src('scripts/app*.js', {read: false}).pipe(clean());  
 });
 
 //Concat source files
-gulp.task('concat', function(){
+gulp.task('concat', ['clean'], function(){
     return gulp.src('scripts/sources/*.js')
             .pipe(concat());
 });
@@ -53,4 +51,6 @@ gulp.task('uglify', ['concat'], function(){
         .pipe(uglify());
     
 });
+
+gulp.task('default', ['uglify']);
 
