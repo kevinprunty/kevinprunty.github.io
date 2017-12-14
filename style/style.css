@@ -68,10 +68,11 @@ footer{
 }
 
 .project-date{
-    background-color: #FFF;
+    background-color: #DDD;
 }
 
 .project-description{
     border-radius: 0 0 10px 10px;
-    background-color: #DDD;
+    background-color: #FFF;
+    padding: 2px;
 }

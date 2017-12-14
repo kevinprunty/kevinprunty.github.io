@@ -6,7 +6,8 @@ const   gulp = require('gulp'),
         lazypipe = require('lazypipe'),
         rename = require("gulp-rename"),
         clean = require("gulp-clean"),
-        pump = require('pump');
+        pump = require('pump'),
+        watch = require('gulp-watch');
 
 //Constant variables
 const scriptsFolder = 'scripts';
@@ -53,10 +54,10 @@ gulp.task('uglify', ['concat'], function(event){
             gulp.src(appFile),
             uglify(),
             rename({
-            dirname: "./",
-            basename: "app",
-            suffix: ".min", 
-            extname: ".js"
+                dirname: "./",
+                basename: "app",
+                suffix: ".min", 
+                extname: ".js"
             }),
             gulp.dest(scriptsFolder)
         ], event
