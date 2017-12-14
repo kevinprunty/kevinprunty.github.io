@@ -1,4 +1,6 @@
-{
+//Will store JSON in a simple JavaScript object for now until I can plan out AJAX shenanigans
+
+var data = {
     "data": {
         "projects": [
             {
@@ -20,4 +22,4 @@
 
         }
     }
-}
+};
