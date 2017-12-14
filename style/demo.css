@@ -1,3 +1,32 @@
+/*
+* Colors:
+*   main: #cdd7d6
+*   accent: #f87060
+*   secondary: #102542
+*/
 form {
     margin: 10px;
+    background-color: #cdd7d6;
+    padding: 15px;
+    margin: 10px 0 10px 0;
+}
+
+form label{
+    border-right: 1px dotted black;
+    padding-right: 8px;
+}
+
+form button{
+    border-radius: 4px;
+    height: 30px;
+    width: 70px;
+    background-color: #cdd7d6;
+}
+
+form button:hover{
+    background-color: #dee8e7;
+}
+
+form button:active{
+    background-color: #bcc6c5;
 }
