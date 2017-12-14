@@ -1,3 +1,7 @@
 !(function(){
-    console.log("This is the main file");
+    //Main file for JS development
+    //Remember: this is front-end code only!
+    const exports = {};
+    
+    return exports;
 })();
