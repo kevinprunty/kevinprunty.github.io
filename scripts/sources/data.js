@@ -20,7 +20,7 @@ var data = {
         },
         {
             "title": "ODU Minicon Webpage",
-            "date": "February 2018",
+            "date": "February, 2018",
             "description": "The page detailing ODU's Minicon",
         }
 

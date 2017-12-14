@@ -46,7 +46,15 @@ footer{
     display: inline;
 }
 
+.section-header{
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+}
 
+/*Projects section*/
+#projects{
+    background-color: white;
+}
 
 #project-list{
     list-style: none;
@@ -58,6 +66,8 @@ footer{
     text-align: center;
     margin: 10px;
     display: inline-block;
+    border: 2px solid black;
+    border-radius: 15px 15px 10px 10px;
 }
 
 .project-name{
