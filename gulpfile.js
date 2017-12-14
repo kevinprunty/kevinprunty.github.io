@@ -2,10 +2,11 @@
 //Required modules for gulp
 const   gulp = require('gulp'),
         g_concat = require('gulp-concat'),
-        g_uglify = require('gulp-uglify'),
+        uglify = require('gulp-uglify'),
         lazypipe = require('lazypipe'),
         rename = require("gulp-rename"),
-        clean = require("gulp-clean");
+        clean = require("gulp-clean"),
+        pump = require('pump');
 
 //Constant variables
 const scriptsFolder = 'scripts';
@@ -13,7 +14,7 @@ const appFile = 'scripts/app.js';
 
 
 
-const uglify = lazypipe()
+/*const uglify = lazypipe()
               .pipe(g_uglify)
               .pipe(rename, {
                 dirname: "./",
@@ -22,6 +23,7 @@ const uglify = lazypipe()
                 extname: ".js"
             })
               .pipe(gulp.dest, scriptsFolder);
+              */
 
 const concat = lazypipe()
               .pipe(g_concat, "app.js")
@@ -46,9 +48,19 @@ gulp.task('concat', ['clean'], function(){
 });
 
 //Uglify app.js file
-gulp.task('uglify', ['concat'], function(){
-    gulp.src(appFile)
-        .pipe(uglify());
+gulp.task('uglify', ['concat'], function(event){
+    pump([
+            gulp.src(appFile),
+            uglify(),
+            rename({
+            dirname: "./",
+            basename: "app",
+            suffix: ".min", 
+            extname: ".js"
+            }),
+            gulp.dest(scriptsFolder)
+        ], event
+    );
     
 });
 

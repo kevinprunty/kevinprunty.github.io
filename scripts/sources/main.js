@@ -1,7 +1,6 @@
-!(function(){
-    //Main file for JS development
-    //Remember: this is front-end code only!
-    const exports = {};
+//ES6 Conventions are incompatible with  gulp-uglify! 
+//Oh no!
+//Just use modules with var to keep things out of the global scope.
+var Main = (function(){
     
-    return exports;
-})();
+}());

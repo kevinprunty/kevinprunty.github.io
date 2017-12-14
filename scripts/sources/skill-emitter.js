@@ -1,3 +1,6 @@
-!(function(){
-    console.log("This is the skill-emitter.js");
-})();
+var SkillEmitter = (function(){
+    var exported = {};
+
+    return exported;
+    
+}());

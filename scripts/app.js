@@ -1,6 +1,12 @@
-!(function(){
-    console.log("This is the main file");
-})();
-!(function(){
-    console.log("This is the skill-emitter.js");
-})();
+//ES6 Conventions are incompatible with  gulp-uglify! 
+//Oh no!
+//Just use modules with var to keep things out of the global scope.
+var Main = (function(){
+    
+}());
+var SkillEmitter = (function(){
+    var exported = {};
+
+    return exported;
+    
+}());
