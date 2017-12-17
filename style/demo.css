@@ -16,6 +16,7 @@ form label{
     padding-right: 8px;
 }
 
+
 form button{
     border-radius: 4px;
     height: 30px;
@@ -29,4 +30,12 @@ form button:hover{
 
 form button:active{
     background-color: #bcc6c5;
+}
+
+.borderless{
+    border: 0;
+}
+
+.selectionList{
+    list-style: none;
 }
