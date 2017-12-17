@@ -9,6 +9,10 @@ I figure using GitHub Pages would be a cool little project to experiment
 with new skills and also fiddle around with git and GitHub. 
 
 ## Plans:
+
+Dec 17, 2017: Nope, decided I'm gonna make a better planned out portfolio in the near future with a different web hosting service- for now, have this nice video.
+
+### Old plans
 (As of December 9, 2017): What you see here currently is just a bunch of me doing some experiments with my environment, really just messing around before I actually design very much. 
 
 Once I figure out my current capabilities, I will design a simple portfolio to show off things I can do and present a summary. 
