@@ -10,7 +10,8 @@ with new skills and also fiddle around with git and GitHub.
 
 ## Plans:
 
-Dec 17, 2017: Nope, decided I'm gonna make a better planned out portfolio in the near future with a different web hosting service- for now, have this nice video.
+September 24, 2018: 
+Hello old friend, time to revive an old project.
 
 ### Old plans
 (As of December 9, 2017): What you see here currently is just a bunch of me doing some experiments with my environment, really just messing around before I actually design very much. 
