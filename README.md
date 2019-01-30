@@ -10,11 +10,9 @@ with new skills and also fiddle around with git and GitHub.
 
 ## Updates:
 
-September 24, 2018: 
+Currently on hiatus due to school, internship, and money problems.
 
-Hello old friend, time to revive an old project.
-I have been working a lot at my internship lately and have forgotten a bit of what I need to know for this. 
-Time to relearn everything too, I suppose!
+
 
 ### Old updates:
 December 9, 2017: What you see here currently is just a bunch of me doing some experiments with my environment, really just messing around before I actually design very much. 
